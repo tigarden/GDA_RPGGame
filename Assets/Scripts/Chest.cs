@@ -10,8 +10,16 @@ public class Chest : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void Open()
+    private void Open()
     {
         _animator.SetTrigger("open");
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(GlobalConstants.PLAYER_TAG))
+        {
+            Open();
+        }
     }
 }

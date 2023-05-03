@@ -93,9 +93,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5538693987909290670}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 4.1887546, y: 2.1193063, z: 1.40181}
   m_Center: {x: 0, y: 0.0025271177, z: 0.700905}
 --- !u!1 &5538693988440207182
@@ -108,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5535166567266955330}
   - component: {fileID: 4000011719469907}
-  - component: {fileID: 4000011719469908}
+  - component: {fileID: 7930257338923738686}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -131,11 +139,11 @@ Transform:
   - {fileID: 6767408468020219098}
   - {fileID: 5535166565571287372}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &4000011719469907
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,8 +160,9 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4000011719469908
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7930257338923738686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8320d784be428183c2adf1a1996a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 4000011719469907}
 --- !u!1 &5538693990945365730
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,9 +266,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5538693990945365730}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 4.1887546, y: 2.11931, z: 0.6542522}
   m_Center: {x: 0, y: -1.05216, z: 0.32712585}
 --- !u!1001 &5539121154368188837
@@ -268,7 +284,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 5535166567266955330}
     m_Modifications:
     - target: {fileID: 1239689958091357567, guid: b8ebd9f182edc9947b5b6744834dc849,
@@ -347,7 +363,17 @@ PrefabInstance:
       value: Potion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2841519208149389164, guid: b8ebd9f182edc9947b5b6744834dc849,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2126899899}
+    - targetCorrespondingSourceObject: {fileID: 2841519208149389164, guid: b8ebd9f182edc9947b5b6744834dc849,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2126899897}
   m_SourcePrefab: {fileID: 100100000, guid: b8ebd9f182edc9947b5b6744834dc849, type: 3}
 --- !u!4 &6767408468020219098 stripped
 Transform:
@@ -369,9 +395,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7760251903401148105}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5607563773542050908, guid: 21156fb051a2eef4490ce33a02c5b9e1, type: 3}

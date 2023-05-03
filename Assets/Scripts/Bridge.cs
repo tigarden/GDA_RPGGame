@@ -1,5 +1,4 @@
-using System;
-using System.Runtime.CompilerServices;
+using Player;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -8,7 +7,6 @@ public class Bridge : MonoBehaviour
 {
     private Rigidbody[] _rigidbodies;
     private NavMeshObstacle _navMeshObstacle;
-    [SerializeField] private GameObject _fire;
 
     private float _minForceValue = 15;
     private float _maxForceValue = 20;
@@ -19,7 +17,7 @@ public class Bridge : MonoBehaviour
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
     }
 
-    public void Break()
+    private void Break()
     {
         // Вырезаем отверстие в навмеш (чтобы игрок там больше не смог пройти)
         _navMeshObstacle.enabled = true;
@@ -39,8 +37,14 @@ public class Bridge : MonoBehaviour
         }
     }
 
-    public void OnBridgeExit()
+    private void OnTriggerEnter(Collider other)
     {
-        _fire.SetActive(true);
+        if (other.CompareTag(GlobalConstants.PLAYER_TAG))
+        {
+            if (!other.gameObject.GetComponent<PlayerController>().IsBuffed)
+            {
+                Break();
+            }
+        }
     }
 }
